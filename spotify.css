@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: serif poppins;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-margin-top: 5rem;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+html::-webkit-scrollbar-track{
+    background-color: #fff;
+    
+}
+html::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 50px;
+}
+.header{
+    display: flex;
+    padding: 2rem 9%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+.header .Logo{
+    margin-right: auto;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 900;
+}
+.header .Logo i{
+    color: white;
+    font-weight: 900;
+    font-size: 3rem;
+}
+.header .navbar a{
+    margin-right: 2rem;
+    font-size: 1.7rem;
+    color: white;
+}
+.header .navbar a:hover{
+    color: #219150;
+}
+
+.header .navbar #nav-close{
+    font-size: 5rem;
+    cursor: pointer;
+    color: #10221b;
+    display: none;
+}
+.header .icons a,
+.header .icons div{
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: white;
+}
+.header .icons a:hover,
+.header .icons div:hover{
+    color: #219150;
+}
+.header #menu-btn {
+    display: none;
+}
+.search-form{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: 1.2s linear;
+}
+.search-form.active{
+    transform: translateY(0);
+}
+.search-form form {
+    width: 70rem;
+    margin: 0 2rem;
+    padding-bottom: 0.2rem solid #fff;
+    display: flex;
+    align-items: center;
+}
+.search-form #close-search{
+    color: #fff;
+    font-size: 6rem;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-weight: 900;
+}
+.search-form form input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 2rem;
+    text-transform: none;
+    color: white;
+    background-color: transparent;
+}
+.search-form form input ::placeholder{
+    color: white;
+}
+.search-form form label{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+.search-form form label:hover{
+    color: #219150;
+}
+.slideshow-container{
+    min-height: 100vh;
+    margin: auto;
+    position: relative;
+}
+.myslides{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#myslides-1{
+    background-image: url("/bless\ b.png");
+}
+
+#myslides-2{
+    background-image: url("/blessb.png");
+}
+
+#myslides-3{
+    background-image: url("/roses.jpg");
+}
+
+#myslides-4{
+    background-image: url("/ross.png");
+}
+.box{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 14%;
+}
+.music--content{
+    text-align: center;
+    justify-content: center;
+}
+.music{
+    font-size: 6rem;
+    color: white;
+    font-weight: 900;
+}
+.free{
+    background-color: #219150;
+    padding: 10px 30px;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.premium{
+    background-color: transparent;
+    padding: 10px 30px;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50px;
+    margin-right: 10px;
+    border: solid white;
+}
+.next ,.prev{
+    color: wheat;
+    font: size 2.8rem; ;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next{
+    right: 0;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 2.0s;
+}
+@media screen and (max-width:1200px){
+    .header{
+        padding: 2rem;
+    }
+}
+@media screen and (max-width:992px) {
+    html {
+        font-size: 55%;
+        scroll-padding-top: 7rem;
+    }
+ 
+}
+@media screen and (max-width:800px) {
+    .content{
+        left: 10%;
+        top: 50%;
+        width: 80%;
+    }
+    .myslides img{
+        height: 100vh;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px) {
+    .header #menu-btn{
+        display: inline-block;
+    
+    }
+    .navbar{
+        position: fixed;
+        height: 100%;
+        display: flex;
+        width: 35rem;
+        flex-direction: column;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        top: 0%;
+        left: -110%;
+    }
+    .header .navbar #nav-close{
+        display: block;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #fff;
+    }
+    .header .navbar {
+        margin: 1rem 0;
+        font-size: 3rem;
+    }
+   .header .navbar.active{
+       left: 0;
+       box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+    }
+
+}
+@media screen and (max-width:600px) {
+    #myslides-1{
+        background-position: left;
+    }
+    #myslides-2{
+        background-position: right;
+    }
+    #myslides-3{
+        background-position: left;
+    }
+    #myslides-4{
+        background-position: right;
+    }
+}
+@media screen and (max-width:600px) {
+    html{
+        font-size: 50%;
+    }
+    .prev, .next,.text{
+        font-size: 11px;
+    }
+    .content{
+        left: 10%;
+        top: 40%;
+        width: 80%;
+    }
+}
